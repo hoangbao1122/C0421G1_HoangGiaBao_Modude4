@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+<form th:action="@{/create}" th:object="${product}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <div>
+        <label for="">Name</label>
+        <input type="text" th:field="*{name}">
+    </div>
+    <div>
+        <label for="">money</label>
+        <input type="text" th:field="*{money}">
+    </div>
+    <div>
+        <label for="">Hãng</label>
+        <input type="text" th:field="*{hang}">
+    </div>
+    <div>
+        <input type="submit" value="them moi nao">
+    </div>
+</form>
+</body>
+</html>
