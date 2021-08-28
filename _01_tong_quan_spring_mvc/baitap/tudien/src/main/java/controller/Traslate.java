@@ -14,6 +14,7 @@ import java.util.Map;
 public class Traslate {
     @PostMapping("/translate")
     public ModelAndView result(@RequestParam String englist) {
+
         String[] str1 = {"tên", "lớp","ăn","xin chào"};
         String[] str2 = {"name", "class","eat", "hello"};
         String result = "";
