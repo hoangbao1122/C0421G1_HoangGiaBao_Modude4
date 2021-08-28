@@ -1,10 +1,10 @@
-package product.modal.Service;
+package product.model.repository;
 
-import product.modal.bean.Product;
+import product.model.bean.Product;
 
 import java.util.List;
 
-public interface IProductService {
+public interface IProductRepository {
     List<Product>listAll();
     void save(Product product);
     Product findById(int id);

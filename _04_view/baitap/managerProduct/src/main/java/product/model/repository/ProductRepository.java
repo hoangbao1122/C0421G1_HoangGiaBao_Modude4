@@ -1,11 +1,11 @@
-package product.modal.Service;
+package product.model.repository;
 
-import product.modal.bean.Product;
+import product.model.bean.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 @Service
-public class ProductServiceImpl implements IProductService {
+public class ProductRepository implements IProductRepository {
     private static Map<Integer, Product> map = null;
 
     static {

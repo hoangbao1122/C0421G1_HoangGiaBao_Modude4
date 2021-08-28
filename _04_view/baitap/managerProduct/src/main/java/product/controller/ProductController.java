@@ -1,7 +1,7 @@
 package product.controller;
 
-import product.modal.Service.IProductService;
-import product.modal.bean.Product;
+import product.model.repository.IProductRepository;
+import product.model.bean.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class ProductController {
     @Autowired
-    private IProductService iProductService;
+    private IProductRepository iProductService;
 
     @GetMapping("list")
     public String list(Model model) {
