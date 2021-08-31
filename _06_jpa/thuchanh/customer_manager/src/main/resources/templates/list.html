@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/create}">Thêm mới</a>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>bithday</th>
+        <th>Email</th>
+        <th>phone</th>
+        <th>address</th>
+    </tr>
+    <tr th:each="obj:${listAll}">
+        <th th:text="${obj.getId()}"></th>
+        <th th:text="${obj.getName()}"></th>
+        <th th:text="${obj.getBirthday()}"></th>
+        <th th:text="${obj.getEmail()}"></th>
+        <th th:text="${obj.getPhone()}"></th>
+        <th th:text="${obj.getAddress()}"></th>
+        <th><a th:href="@{/delete/{id}(id=${obj.getId()})}">Xóa</a></th>
+        <th><a th:href="@{/edit/{id}(id=${obj.getId()})}">Sửa</a> </th>
+    </tr>
+</table>
+</body>
+</html>
