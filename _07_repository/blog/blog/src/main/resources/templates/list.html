@@ -24,7 +24,9 @@
         <td th:text="${obj.header}"></td>
         <td th:text="${obj.content}"></td>
         <td th:text="${obj.footer}"></td>
-        <td th:text="${obj.category}"></td>
+
+        <td  th:each="obj:${category}" th:text="${obj.name}"></td>
+
         <td th:text="${obj.date}"></td>
         <td><a th:href="@{/delete/{id}(id=${obj.id})}">Delete</a></td>
         <td><a th:href="@{/edit/{id}(id=${obj.id})}">edit</a></td>

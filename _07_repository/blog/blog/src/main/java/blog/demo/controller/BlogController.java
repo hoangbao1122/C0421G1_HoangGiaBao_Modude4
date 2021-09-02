@@ -2,6 +2,7 @@ package blog.demo.controller;
 
 import blog.demo.model.bean.Blog;
 import blog.demo.model.service.IBlogService;
+import blog.demo.model.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,15 +24,20 @@ public class BlogController {
     @Autowired
     private IBlogService iBlogService;
 
+    @Autowired
+    private ICategoryService iCategoryService;
+
     @GetMapping("/list")
     public String findAll(@PageableDefault(value = 3)Pageable pageable, Model model) {
         Page<Blog> blogs = this.iBlogService.findAll(pageable);
         model.addAttribute("listAll", blogs);
+        model.addAttribute("category",this.iCategoryService.findAll());
         return "list";
     }
 
     @GetMapping("/create")
     public String saveForm(Model model) {
+        model.addAttribute("listCategory",this.iCategoryService.findAll());
         model.addAttribute("blog", new Blog());
         return "create";
     }

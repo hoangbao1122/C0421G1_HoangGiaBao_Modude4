@@ -6,7 +6,7 @@
 </head>
 <body>
 <form th:action="@{/create}" th:object="${blog}" method="post">
-    <label for="">id</label>
+<!--    <label for="">id</label>-->
     <input type="hidden" th:field="*{id}">
     <label for="">Name</label>
     <input type="text" th:field="*{name}">
@@ -16,13 +16,9 @@
     <input type="text" th:field="*{content}">
     <label for="">footer</label>
     <input type="text" th:field="*{footer}">
-
-    <select name="" id="">
-        <option th:each="obj:${listAllCategory}"></option>
-    </select>
-
+    <br/>
+    <input type="checkbox" th:each="obj:${listCategory}" th:text="${obj.name}" th:value="${obj.id}">
     <button type="submit">Add</button>
-
 </form>
 </body>
 </html>
