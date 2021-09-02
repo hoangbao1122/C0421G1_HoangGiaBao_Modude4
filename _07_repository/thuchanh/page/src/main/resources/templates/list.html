@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/create}">Add</a>
+<form action="/search">
+<table>
+    <tr>
+        <th colspan="4"><input type="text" name="searchName"/></th>
+        <th><button type="submit">Search</button></th>
+    </tr>
+</table>
+</form>
+
+
+<table border="1px">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>address</th>
+    </tr>
+    <tr th:each="obj:${listAll}">
+        <td th:text="${obj.id}"></td>
+        <td th:text="${obj.name}"></td>
+        <td th:text="${obj.email}"></td>
+        <td th:text="${obj.phone}"></td>
+        <td th:text="${obj.address}"></td>
+        <td><a th:href="@{/delete/{id}(id = ${obj.id})}">delete</a> </td>
+    </tr>
+</table>
+<div>
+    <a th:href="@{/list(page=${listAll.number - 1})}" th:if="${listAll.hasPrevious()}">Prev</a>
+    <span th:text="${listAll.number + 1}"></span>/<span th:text="${listAll.totalPages}"></span>
+    <a th:href="@{/list(page=${listAll.number + 1})}" th:if="${listAll.hasNext()}">next</a>
+</div>
+</body>
+</html>
