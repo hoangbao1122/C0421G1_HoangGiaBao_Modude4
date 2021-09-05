@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${user}" th:action="@{/validate}" method="post">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th><input th:field="*{name}"></th>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+        </tr>
+        <tr>
+            <th>age</th>
+            <th><input th:field="*{age}"></th>
+            <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Name Error</td>
+        </tr>
+        <tr>
+            <th><button type="submit">Check</button></th>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
