@@ -11,22 +11,21 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Size(min = 5, max = 45)
+
     private String firstName;
-    @Size(min = 5, max = 45)
+
     private String lastName;
-    @Size(min = 10, max = 11)
+
     private String phone;
-    @Min(18)
+
     private int age;
-    @Email
     private String email;
 
     public User() {
 
     }
 
-    public User(Integer id, @Size(min = 5, max = 45) String firstName, @Size(min = 5, max = 45) String lastName, @Size(min = 10, max = 11) String phone, @Min(18) int age, @Email String email) {
+    public User(Integer id, String firstName, String lastName, String phone, int age, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

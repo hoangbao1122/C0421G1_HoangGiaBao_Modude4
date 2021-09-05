@@ -38,7 +38,7 @@ public class UserController {
         if (bindingResult.hasFieldErrors()) {
             return "create";
         }
-        User user = new User();
+        User user = new User()  ;
         BeanUtils.copyProperties(userDto, user);
         this.iUserService.save(user);
         model.addAttribute("user", user);
