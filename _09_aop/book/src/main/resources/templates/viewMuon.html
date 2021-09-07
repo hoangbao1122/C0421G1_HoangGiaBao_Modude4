@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/borrowBook}" th:object="${muon}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+     <input type="hidden" th:field="*{nameBook}">
+    <input type="hidden" th:field="*{quantity}">
+
+    <p>Bạn có muốn mượn cuốn sách có tên <span th:text="*{nameBook}" style="color: blue"></span></p>
+    <button type="submit">Muon</button>
+
+</form>
+</body>
+</html>

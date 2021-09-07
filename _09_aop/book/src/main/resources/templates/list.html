@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/create}">Add New book</a>
+<table border="1px">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>so luong</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each="obj:${listAll}">
+        <td th:text="${obj.id}"></td>
+        <td th:text="${obj.nameBook}"></td>
+        <td th:text="${obj.quantity}"></td>
+        <td><a th:href="@{borrowBook/{id}(id = ${obj.id})}">Muon sach</a> </td>
+        <td><a th:href="@{traBook/{id}/(id = ${obj.id})}">Tra sach</a> </td>
+    </tr>
+</table>
+</body>
+</html>
