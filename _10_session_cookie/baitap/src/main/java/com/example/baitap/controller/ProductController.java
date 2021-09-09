@@ -64,10 +64,9 @@ public class ProductController {
 
     @GetMapping("/price")
     public String tinhTien(@SessionAttribute CardDto card) {
-        Iterable<Product> productOptional = this.iProductService.findAll();
         ProductDto productDto = new ProductDto();
-        BeanUtils.copyProperties(productOptional, productDto);
+        BeanUtils.copyProperties(this.iProductService.findAll(), productDto);
         card.deleteCard(productDto);
-        return "redirect:/shop";
+        return "redirect:/shop-card";
     }
 }
