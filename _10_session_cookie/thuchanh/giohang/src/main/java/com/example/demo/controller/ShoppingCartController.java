@@ -12,14 +12,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class ShoppingCartController {
 
     @ModelAttribute("cart")
-    public Cart setupCart(){
+    public Cart setupCart() {
         return new Cart();
     }
 
     @GetMapping("/shopping-cart")
-    public ModelAndView showCart (@SessionAttribute("cart") Cart cart){
+    public ModelAndView showCart(@SessionAttribute("cart") Cart cart) {
         ModelAndView modelAndView = new ModelAndView("/cart");
-        modelAndView.addObject("cart",cart);
+        modelAndView.addObject("cart", cart);
         return modelAndView;
     }
 }

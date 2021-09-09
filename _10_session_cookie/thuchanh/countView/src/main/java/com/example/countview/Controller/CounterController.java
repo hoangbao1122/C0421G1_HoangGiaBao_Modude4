@@ -1,6 +1,6 @@
 package com.example.countview.Controller;
 
-import com.codegym.model.Counter;
+
 import com.example.countview.Model.bean.Counter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

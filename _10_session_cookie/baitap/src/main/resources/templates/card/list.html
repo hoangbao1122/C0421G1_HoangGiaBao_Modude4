@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-
+<div class="container">
 <h3>Total <span th:text="${card.countItemQuatity()}"></span></h3>
-<table border="1px">
+<table class="table table-bordered">
+
     <tr>
         <th>id</th>
         <th>name</th>
@@ -16,16 +18,21 @@
         <th colspan="2">Action</th>
     </tr>
     <tr th:each="cards:${card.productMap}">
+
         <td th:text="${cards.key.id}"></td>
         <td th:text="${cards.key.name}"></td>
-        <td th:text="${cards.key.img}"></td>
+        <td><img th:src="@{${cards.key.img}}" style="width: 230px;height: 220px"></td>
         <td th:text="${cards.value}"></td>
         <td><a th:href="@{detail/{id}(id = ${cards.key.getId()})}">Xem chi tiet san pham</a></td>
-        <td><a th:href="@{deleteCard/{id}(id = ${cards.key.getId()})}">Delete</a></td>
+        <td><a th:href="@{deleteCard/{id}(id = ${cards.key.getId()})}"><button type="button" class="btn btn-danger">Delete</button></a></td>
     </tr>
 </table>
 <p>total Money <span th:text="${card.countTotalPayment()}"></span></p>
 <a th:href="@{price}">Tinh tien</a>
-<a th:href="@{shop}">back</a>
+<a th:href="@{shop}"><button type="button" class="btn btn-primary">back</button></a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
 </body>
 </html>
