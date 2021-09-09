@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/shop-card}">Xem gio hang</a>
+<table border="1px">
+    <tr>
+        <th>id</th>
+        <th>NAme</th>
+        <th>Img</th>
+        <th>price</th>
+        <th>description</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="product:${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.img}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.description}"></td>
+        <td><a th:href="@{/add/{id}(id = ${product.id})}">Add to card</a></td>
+    </tr>
+</table>
+</body>
+</html>

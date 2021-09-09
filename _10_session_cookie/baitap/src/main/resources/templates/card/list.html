@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>Total <span th:text="${card.countItemQuatity()}"></span></h3>
+<table border="1px">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>img</th>
+        <th>quantiry</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each="cards:${card.productMap}">
+        <td th:text="${cards.key.id}"></td>
+        <td th:text="${cards.key.name}"></td>
+        <td th:text="${cards.key.img}"></td>
+        <td th:text="${cards.value}"></td>
+        <td><a th:href="@{detail/{id}(id = ${cards.key.getId()})}">Xem chi tiet san pham</a></td>
+        <td><a th:href="@{deleteCard/{id}(id = ${cards.key.getId()})}">Delete</a></td>
+    </tr>
+</table>
+<p>total Money <span th:text="${card.countTotalPayment()}"></span></p>
+<a th:href="@{price}">Tinh tien</a>
+<a th:href="@{shop}">back</a>
+</body>
+</html>
