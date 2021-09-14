@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<a th:href="@{/create}">Add Blog</a>
+<div>
+    <input type="text" id="searchBlog">
+    <button type="submit" class="search">search</button>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".search").click(function () {
+            let value = $("#searchBlog").val();
+            console.log(value);
+            $("table").empty();
+
+            $.ajax({
+                url: "http://localhost:8080/search?searchBlog=" + value,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    let tr = [];
+                    for (let i = 0; i < data.length; i++) {
+                        tr.push('<tr>')
+                        tr.push('<td>' + data[i].id + '</td>');
+                        tr.push('<td>' + data[i].name + '</td>');
+                        tr.push('<td>' + data[i].header + '</td>');
+                        tr.push('<td>' + data[i].content + '</td>');
+                        tr.push('<td>' + data[i].footer + '</td>');
+                        tr.push('</tr>')
+                    }
+                    $('table').append($(tr.join('')));
+                }
+            })
+        })
+    })
+    
+</script>
+<table border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>header</th>
+        <th>content</th>
+        <th>footer</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each="obj:${listAll}">
+        <td th:text="${obj.id}"></td>
+        <td th:text="${obj.name}"></td>
+        <td th:text="${obj.header}"></td>
+        <td th:text="${obj.content}"></td>
+        <td th:text="${obj.footer}"></td>
+
+        <td th:each="objCate:${category}" th:text="${objCate.name}"></td>
+
+        <td th:text="${obj.date}"></td>
+        <td><a th:href="@{/delete/{id}(id=${obj.id})}">Delete</a></td>
+        <td><a th:href="@{/edit/{id}(id=${obj.id})}">edit</a></td>
+        <td><a th:href="@{/detail/{id}(id = ${obj.id})}">Xem chi tiet</a></td>
+    </tr>
+</table>
+<div>
+    <a th:href="@{/list(page=${listAll.number - 1})}" th:if="${listAll.hasPrevious()}">Prev</a>
+    <span th:text="${listAll.number + 1}"></span>/<span th:text="${listAll.totalPages}"></span>
+    <a th:href="@{/list(page=${listAll.number + 1})}" th:if="${listAll.hasNext()}">next</a>
+</div>
+</body>
+</html>
