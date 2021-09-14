@@ -1,4 +1,5 @@
 package com.example.blog.controller;
+
 import com.example.blog.model.bean.Blog;
 import com.example.blog.model.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class BlogController {
@@ -18,26 +20,34 @@ public class BlogController {
     private IBlogService iBlogService;
 
     @GetMapping()
-    public ResponseEntity<Page<Blog>> findAll(@PageableDefault(value = 3) Pageable pageable ) {
+    public ResponseEntity<Page<Blog>> findAll(@PageableDefault(value = 3) Pageable pageable) {
         Page<Blog> blogs = this.iBlogService.findAll(pageable);
-        if (blogs.isEmpty()){
+        if (blogs.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
     @GetMapping("list")
-    public ModelAndView listAll(@PageableDefault(value = 3) Pageable pageable){
+    public ModelAndView listAll(@PageableDefault(value = 3) Pageable pageable) {
         ModelAndView modelAndView = new ModelAndView("list");
-        modelAndView.addObject("listAll",this.iBlogService.findAll(pageable));
+        modelAndView.addObject("listAll", this.iBlogService.findAll(pageable));
         return modelAndView;
     }
+
     @GetMapping("/search")
     public ResponseEntity<List<Blog>> search(@RequestParam String searchBlog) {
         List<Blog> page = this.iBlogService.findAllByNameContaining(searchBlog);
 
-        if (page.isEmpty()){
+        if (page.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(page,HttpStatus.OK);
+        return new ResponseEntity<>(page, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<Blog>> findById(@PathVariable int id) {
+        Optional<Blog> blog = this.iBlogService.findByid(id);
+        return new ResponseEntity<>(blog, HttpStatus.OK);
     }
 }

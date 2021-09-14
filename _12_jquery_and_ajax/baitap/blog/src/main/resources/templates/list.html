@@ -41,7 +41,22 @@
             })
         })
     })
-    
+
+    detail
+    $(".detail").click(function () {
+        let idBlog = $(this).attr("href");
+        $.ajax({
+            type: "GET",
+            url: `${idBlog}`,
+            success: function (data) {
+                document.getElementById("phoneProducer").value = data.producer;
+                document.getElementById("phoneModel").value = data.model;
+                document.getElementById("phonePrice").value = data.price;
+                document.getElementById("idBlog").value = data.id;
+            }
+        })
+        event.preventDefault();
+    })
 </script>
 <table border="1px">
     <tr>
@@ -66,7 +81,7 @@
         <td th:text="${obj.date}"></td>
         <td><a th:href="@{/delete/{id}(id=${obj.id})}">Delete</a></td>
         <td><a th:href="@{/edit/{id}(id=${obj.id})}">edit</a></td>
-        <td><a th:href="@{/detail/{id}(id = ${obj.id})}">Xem chi tiet</a></td>
+        <td><a class="detail" th:href="${obj.id}">Xem chi tiet</a></td>
     </tr>
 </table>
 <div>
