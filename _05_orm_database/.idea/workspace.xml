@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="87bb0199-8516-42ce-b9f9-20da57796bf2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../_01_tong_quan_spring_mvc/thuchanh/bai2/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../_01_tong_quan_spring_mvc/thuchanh/bai2/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_02_spring_controller/thuchanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../_02_spring_controller/thuchanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_03_data_binding/baitap/thuDienTu/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_03_data_binding/baitap/thuDienTu/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/build/classes/java/main/product/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/build/classes/java/main/product/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/build/classes/java/main/product/modal/Service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/build/classes/java/main/product/modal/Service/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/build/classes/java/main/product/modal/bean/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/build/libs/managerProduct-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_view/baitap/managerProduct/build/libs/managerProduct-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanh/customerManager/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuchanh/customerManager/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/thuchanh/customerManager/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/model/bean/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/model/bean/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/model/service/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/model/service/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/model/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/java/blog/demo/model/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_jpa/baitap/blog/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_jpa/baitap/bt/src/bt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_jpa/baitap/bt/src/bt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/repository/ICategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/repository/ICategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/service/ICategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/service/ICategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/service/Impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/java/blog/demo/model/service/Impl/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_repository/blog/blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1xlEIClKjC0Gi9YQI4Ay9Blby6c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87bb0199-8516-42ce-b9f9-20da57796bf2" name="Changes" comment="" />
+      <created>1630921192706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630921192706</updated>
+      <workItem from="1630921193884" duration="62000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -41,6 +41,10 @@ public class LoginController {
             cookie.setMaxAge(24 * 60 * 60);
             response.addCookie(cookie);
 
+
+
+
+
             //get all cookies
             Cookie[] cookies = request.getCookies();
             //iterate each cookie

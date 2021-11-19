@@ -1,0 +1,164 @@
+.body {
+    overflow: hidden;
+}
+.header{
+    width: 80%;
+    margin: auto;
+}
+.header .phone{
+    margin-top: 50px;
+    font-size: 18px;
+
+    margin-left: 300px;
+    position: relative;
+}
+.button-header{
+    margin-left: 600px;
+    margin-top: -50px;
+    position: relative;
+}
+.header .button-header button{
+    padding: 8px 55px 8px 55px;
+}
+.menu {
+    background: black;
+    opacity: 0.6;
+}
+
+
+.menu ul li {
+    list-style: none;
+    color: white;
+    float: left;
+    font-size: 20px;
+    margin-left: 120px;
+}
+
+.slide {
+    width: 100%;
+    height: 700px;
+    background: red;
+}
+
+.text {
+
+}
+
+.text .text-one {
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.card .card-group img {
+    width: auto;
+    height: 350px;
+}
+
+.card .button-card {
+    top: 475px;
+    left: 182px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.view-all {
+    margin-top: 50px;
+    margin-left: 880px;
+
+}
+
+.view-all button {
+    border-radius: 20px;
+    padding: 6px 20px 6px 20px;
+}
+
+.text-two {
+    width: 700px;
+    height: 230px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.content .card-body {
+    background: black;
+    margin-top: -138px;
+    position: relative;
+    height: 140px;
+    opacity: 0.6;
+    font-size: 15px;
+
+}
+
+.content .card-body .card-text {
+    font-size: 15px;
+    color: white;
+}
+
+.content-two {
+    width: 80%;
+    margin: 0 auto;
+
+}
+.content-two .card{
+    margin-top: 30px;
+    margin-left:1px ;
+
+    position: relative;
+}
+.content-two .card-two{
+    position: relative;
+    margin-left: -39px;
+}
+ #alight-img{
+    margin-left: -66px;
+    position: absolute;
+}
+.content-two .card-body{
+    margin-top: -100px;
+    height: 100px;
+    background: black;
+    color: white;
+    opacity: 0.6;
+    position: relative;
+}
+.img-slide{
+
+}
+.slide-two .width-content{
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    top: -800px;
+    color: black;
+
+    position: relative;
+}
+.slide-two h1,span{
+    position: relative;
+    text-align: center;
+}
+footer {
+    width: 80%;
+    height: 250px;
+
+    margin: auto;
+}
+footer ul li {
+    position: relative;
+    top: -180px;
+    font-size: 20px;
+    list-style: none;
+    margin-left: 200px;
+}

@@ -9,15 +9,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
-import javax.xml.crypto.Data;
+
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Date;
+
 
 @Controller
 public class BlogController {
@@ -28,27 +24,27 @@ public class BlogController {
     private ICategoryService iCategoryService;
 
     @GetMapping("/list")
-    public String findAll(@PageableDefault(value = 3)Pageable pageable, Model model) {
+    public String findAll(@PageableDefault(value = 3) Pageable pageable, Model model) {
         Page<Blog> blogs = this.iBlogService.findAll(pageable);
         model.addAttribute("listAll", blogs);
-        model.addAttribute("category",this.iCategoryService.findAll());
+        model.addAttribute("category", this.iCategoryService.findAll());
         return "list";
     }
 
     @GetMapping("/create")
     public String saveForm(Model model) {
-        model.addAttribute("listCategory",this.iCategoryService.findAll());
+        model.addAttribute("listCategory", this.iCategoryService.findAll());
         model.addAttribute("blog", new Blog());
         return "create";
     }
 
     @PostMapping("/create")
-    public String save(@ModelAttribute Blog blog,Model model) {
+    public String save(@ModelAttribute Blog blog, Model model) {
 
         LocalDate localDate = blog.setDate(LocalDate.now());
 
         this.iBlogService.save(blog);
-        model.addAttribute("blog",blog);
+        model.addAttribute("blog", blog);
 //        redirectAttributes.addFlashAttribute("messageCreate", "add ok" + blog.getName());
         return "redirect:/list";
 
@@ -60,19 +56,29 @@ public class BlogController {
         this.iBlogService.delete(blog);
         return "redirect:/list";
     }
+
     @GetMapping("/edit/{id}")
-    public String editshow(Model model,@PathVariable int id){
-        model.addAttribute("blog",this.iBlogService.findByid(id));
+    public String editshow(Model model, @PathVariable int id) {
+        model.addAttribute("blog", this.iBlogService.findByid(id));
         return "edit";
     }
+
     @PostMapping("/edit")
-    public String edit(@ModelAttribute Blog blog){
+    public String edit(@ModelAttribute Blog blog) {
         this.iBlogService.update(blog);
         return "redirect:/list";
     }
+
     @GetMapping("/detail/{id}")
-    public String detail(@PathVariable int id,Model model){
-        model.addAttribute("blog",this.iBlogService.findByid(id));
+    public String detail(@PathVariable int id, Model model) {
+        model.addAttribute("blog", this.iBlogService.findByid(id));
         return "detail";
+    }
+
+    @GetMapping("search")
+    public String search(@RequestParam String searchBlog, Model model,Pageable pageable) {
+        Page<Blog> page = this.iBlogService.findAllByNameContaining(searchBlog,pageable);
+        model.addAttribute("listAll",page);
+        return "list";
     }
 }

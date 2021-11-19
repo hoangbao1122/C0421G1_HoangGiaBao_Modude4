@@ -1,5 +1,6 @@
 package blog.demo.model.service;
 
+import blog.demo.model.bean.Blog;
 import blog.demo.model.bean.Category;
 
 import java.util.List;

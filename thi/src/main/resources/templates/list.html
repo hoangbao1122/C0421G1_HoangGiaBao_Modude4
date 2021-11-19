@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<style>
+    .header .button-header button {
+        padding: 8px 55px 8px 55px;
+    }
+
+    .nut-add {
+        top: 20px;
+        left: 1000px;
+        position: relative;
+
+    }
+
+    .nut-add button {
+        padding: 8px 40px 8px 40px;
+    }
+
+    .chuyen-trang {
+        position: relative;
+        top: 175px;
+    }
+
+    .form-control {
+        width: 250px;
+    }
+
+
+</style>
+<body>
+<div class="container">
+
+    <a href="/create" class="nut-add">
+        <button class="btn btn-success">Add</button>
+    </a>
+    <!--    <form class="d-flex" th:action="@{/customer/list}">-->
+    <!--        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name">-->
+    <!--        <button class="btn btn-outline-success" type="submit">Search</button>-->
+    <!--    </form>-->
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <p th:if="${messOk}" th:text="${messOk}" style="color: green"></p>
+            <th scope="col">Id Product</th>
+            <th scope="col">Name Product</th>
+            <th scope="col">Price</th>
+            <th scope="col">type Product</th>
+            <th scope="col">quantity</th>
+            <th scope="col">startDateOrder</th>
+            <td scope="col" colspan="2" align="center">Action</td>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="obj:${listAll}">
+            <td th:text="${obj.idProduct}"></td>
+            <td th:text="${obj.nameProduct}"></td>
+            <td th:text="${obj.price}"></td>
+            <td th:text="${obj.typeProduct}"></td>
+            <td th:text="${obj.quantity}"></td>
+            <td th:text="${obj.orders.}"></td>
+
+            <td>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        th:data-parameter1="${obj.idProduct}"
+                        th:data-parameter2="${obj.nameProduct}"
+                        onclick="showModal(this.getAttribute('data-parameter1'),this.getAttribute('data-parameter2'))">
+                    Delete
+                </button>
+            </td>
+
+
+            <td><a th:href="@{edit/{id} (id = ${obj.idProduct})}">
+                <button class="btn btn-success">edit</button>
+            </a>
+            </td>
+
+        </tr>
+        </tbody>
+
+        <!--        <div class="chuyen-trang">-->
+        <!--            <a th:href="@{/customer/list(page = ${listAll.number - 1},name = ${nameSearch})}"-->
+        <!--               th:if="${listAll.hasPrevious()}">Prev</a>-->
+        <!--            <span th:text="${listAll.number + 1 }"></span>/<span th:text="${listAll.totalPages}"></span>-->
+        <!--            <a th:href="@{/customer/list(page = ${listAll.number + 1 },name = ${nameSearch})}"-->
+        <!--               th:if="${listAll.hasNext()}">next</a>-->
+        <!--        </div>-->
+
+
+        <div class="chuyen-trang">
+            <a th:href="@{'/list'(page=${listAll.number - 1})}" th:if="${listAll.hasPrevious()}">Previous</a>
+
+            <span th:text="${listAll.number + 1}"></span>/<span th:text="${listAll.totalPages}"></span>
+
+            <a th:href="@{'/list'(page=${listAll.number + 1})}" th:if="${listAll.hasNext()}">Next</a>
+
+        </div>
+
+    </table>
+
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal  delete -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+        <form th:action="@{/delete}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        Do you want delete
+                        <span id="nameCus" style="color: red"></span>
+
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <input type="hidden" id="id" name="id">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+    function showModal(id, name) {
+        document.getElementById("id").value = id;
+        document.getElementById("nameCus").innerText = name;
+    }
+</script>
+
+</body>
+</html>

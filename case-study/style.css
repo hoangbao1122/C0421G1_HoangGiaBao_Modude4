@@ -1,0 +1,77 @@
+body {
+
+}
+
+.container-fruid {
+    max-width: 100%;
+}
+
+.search {
+    text-align: center;
+    margin-right: 700px;
+    margin-left: auto;
+}
+
+.form-search {
+    width: 500px;
+}
+
+.mess {
+    margin-right: 100px;
+}
+
+.mess ul {}
+
+.mess ul li {
+    list-style: none;
+    margin-right: 40px;
+    float: left;
+}
+
+.menu-left {}
+
+.menu-left ul li {
+    line-height: 80px;
+    list-style: none;
+}
+
+.menu-left ul li span {
+    line-height: 80px;
+    top: 3px;
+    position: relative;
+}
+
+.item-left {
+    font-size: 20px;
+}
+
+.card {
+    width: 500px;
+}
+
+#card-one {
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+#card-two {
+    background: #AD5348;
+    background: -webkit-radial-gradient(bottom right, #AD5348, #CCC5BD);
+    background: -moz-radial-gradient(bottom right, #AD5348, #CCC5BD);
+    background: radial-gradient(to top left, #AD5348, #CCC5BD);
+}
+
+#card-three {
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 252, 186, 1) 93%);
+}
+
+#card-four {
+    background: #7332FE;
+    background: -webkit-radial-gradient(bottom right, #7332FE, #F1A655);
+    background: -moz-radial-gradient(bottom right, #7332FE, #F1A655);
+    background: radial-gradient(to top left, #7332FE, #F1A655);
+}
+
+.card-body {
+    height: 150px;
+}

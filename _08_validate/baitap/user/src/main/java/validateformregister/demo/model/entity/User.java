@@ -2,9 +2,6 @@ package validateformregister.demo.model.entity;
 
 import javax.persistence.*;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
 
 @Entity
 public class User {

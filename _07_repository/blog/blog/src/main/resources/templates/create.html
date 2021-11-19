@@ -17,7 +17,7 @@
     <label for="">footer</label>
     <input type="text" th:field="*{footer}">
     <br/>
-    <input type="checkbox" th:each="obj:${listCategory}" th:text="${obj.name}" th:value="${obj.id}">
+    <input type="checkbox" th:each="objCate:${listCategory}" th:text="${objCate.name}">
     <button type="submit">Add</button>
 </form>
 </body>

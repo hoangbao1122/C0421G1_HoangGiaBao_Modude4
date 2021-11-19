@@ -8,6 +8,6 @@ public interface IBlogService {
     List<Blog>findAll();
     void save(Blog blog);
     Blog findByid(int id);
-    void delete(int id);
+    void delete(Blog blog);
     void update(Blog blog);
 }

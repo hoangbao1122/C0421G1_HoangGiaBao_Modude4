@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <form action="/service/create" method="post" th:object="${service}">
+        <input type="hidden" th:field="*{id}">
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"> List</label>
+            <select name="" id="" th:field="*{rentType}">-->
+                <option value="" th:each="type:${rentList}" th:text="${type.rendTypeName}"
+                        th:value="${type.rendTypeid}"></option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Type List</label>
+            <select name="" id="" th:field="*{serviceType}">-->
+                <option value="" th:each="types:${typeList}" th:text="${types.nameServiceType}"
+                        th:value="${types.idServiceType}"></option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   th:field="*{name}">
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red"></span>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">area</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{area}">
+            <span th:if="${#fields.hasErrors('area')}" th:errors="*{area}" style="color: red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">cost</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{cost}">
+            <span th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}" style="color: red"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Max People</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{maxPeople}">
+            <span th:if="${#fields.hasErrors('area')}" th:errors="*{area}" style="color: red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">standardRoom</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{standardRoom}">
+            <span th:if="${#fields.hasErrors('standardRoom')}" th:errors="*{standardRoom}" style="color: red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">description</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{description}">
+            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" style="color: red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">pool</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{pool}">
+            <span th:if="${#fields.hasErrors('pool')}" th:errors="*{pool}" style="color: red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">poolArea</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{poolArea}">
+            <span th:if="${#fields.hasErrors('poolArea')}" th:errors="*{poolArea}" style="color: red"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">numberOfFlorr</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" th:field="*{numberOfFlorr}">
+            <span th:if="${#fields.hasErrors('numberOfFlorr')}" th:errors="*{numberOfFlorr}" style="color: red"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+</body>
+</html>

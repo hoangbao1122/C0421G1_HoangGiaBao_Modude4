@@ -39,4 +39,11 @@ public class BlogServiceImpl implements IBlogService {
     public void update(Blog blog) {
         this.iBlogRepository.save(blog);
     }
+
+    @Override
+    public Page<Blog> findAllByNameContaining(String name, Pageable pageable) {
+        return this.iBlogRepository.findAllByNameContaining(name,pageable);
+    }
+
+
 }

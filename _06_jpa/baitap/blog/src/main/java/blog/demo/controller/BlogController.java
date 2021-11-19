@@ -30,18 +30,19 @@ public class BlogController {
     }
 
     @PostMapping("/create")
-    public String save(@ModelAttribute Blog blog, RedirectAttributes redirectAttributes) {
+    public String save(@ModelAttribute Blog blog,Model model) {
         this.iBlogService.save(blog);
-        redirectAttributes.addFlashAttribute("messageCreate", "add ok" + blog.getName());
+        model.addAttribute("blog",blog);
+//        redirectAttributes.addFlashAttribute("messageCreate", "add ok" + blog.getName());
         return "redirect:/list";
 
     }
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable int id, @ModelAttribute Blog blog, Model model) {
-        model.addAttribute("blog", this.iBlogService.findByid(id));
-        this.iBlogService.delete(blog.getId());
-        return "list";
+        model.addAttribute("listAll", this.iBlogService.findByid(id));
+        this.iBlogService.delete(blog);
+        return "redirect:/list";
     }
     @GetMapping("/edit/{id}")
     public String editshow(Model model,@PathVariable int id){

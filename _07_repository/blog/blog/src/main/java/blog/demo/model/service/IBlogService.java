@@ -12,4 +12,5 @@ public interface IBlogService {
     Blog findByid(int id);
     void delete(Blog blog);
     void update(Blog blog);
+    Page<Blog> findAllByNameContaining(String name,Pageable pageable);
 }

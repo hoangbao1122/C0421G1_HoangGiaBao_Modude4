@@ -28,8 +28,8 @@ public class BlogServiceImpl implements IBlogService{
     }
 
     @Override
-    public void delete(int id) {
-        this.iBlogRepository.deleteById(id);
+    public void delete(Blog blog) {
+        this.iBlogRepository.delete(blog);
     }
 
     @Override
